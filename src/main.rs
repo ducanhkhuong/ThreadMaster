@@ -93,7 +93,7 @@ async fn main() -> Result<(),reqwest::Error> {
             loop{
                 let long = "105.83";
                 let lat = "21.02";
-                let api_key = "4455d3b14a1f08c648288279e73693ac";
+                let api_key = APIKEY;
                 let url = format!("https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={}",lat,long,api_key);
                 
                 let request = reqwest::get(&url).await?;
